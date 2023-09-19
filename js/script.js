@@ -62,6 +62,8 @@
 // }
 
 // submit();
+const warningDiv = document.getElementById('warning');
+const warningMessage = `<span>Data telah terkirim</span>`;
 
 function handleGetFormData() {
   const name = document.getElementById('name').value;
@@ -116,6 +118,7 @@ function validateForm(event) {
   event.preventDefault();
   if (checkForm() && isNumber() && checkboxIsChecked()) {
     console.log(handleGetFormData());
+    warningDiv.innerHTML = warningMessage;
   } else {
     console.log('Validasi gagal');
   }
