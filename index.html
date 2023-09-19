@@ -126,23 +126,33 @@
       <p>Have questions? submit below</p>
 
       <div class="row">
-        <form action="">
+        <form novalidate>
           <div class="input-group">
             <i data-feather="user"></i>
-            <input type="text" placeholder="Your Name" />
+            <input type="text" placeholder="Your Name" id="name" />
+          </div>
+
+          <div class="input-group">
+            <i data-feather="columns"></i>
+            <input type="text" placeholder="City" id="city" />
           </div>
 
           <div class="input-group">
             <i data-feather="mail"></i>
-            <input type="text" placeholder="Your Email" />
+            <input type="text" placeholder="Your Email" id="email" />
           </div>
 
           <div class="input-group">
-            <i data-feather="phone"></i>
-            <input type="text" placeholder="Number Phone" />
+            <i data-feather="circle"></i>
+            <input type="text" placeholder="Zip code" id="zip-code" />
           </div>
+          <label for="id-check" class="label-cek">
+            <input type="checkbox" id="status" />
 
-          <button type="submit" class="btn">Submit</button>
+            Dengan ini saya menyatakan data yang diisi pada form ini adalah
+            benar dan telah selesai</label
+          >
+          <button type="submit" id="submit-form" class="btn">Submit</button>
         </form>
       </div>
     </section>
@@ -179,5 +189,8 @@
     <script>
       feather.replace();
     </script>
+
+    <!-- tag JAVASCRIPT -->
+    <script src="js/script.js"></script>
   </body>
 </html>
