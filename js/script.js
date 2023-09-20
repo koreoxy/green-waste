@@ -60,6 +60,8 @@ function submit() {
       'Periksa form anda sekali lagi';
   } else {
     document.getElementById('warning').textContent = '';
+    document.getElementById('warning').textContent = 'Succes';
+    form.reset();
   }
 }
 

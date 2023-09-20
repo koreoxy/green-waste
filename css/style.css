@@ -343,12 +343,6 @@ body {
   border-radius: 0.5rem;
 }
 
-.contact .row #warning {
-  text-align: center;
-  font-size: 1.5rem;
-  margin: 3rem;
-}
-
 .contact .row .warning {
   text-align: center;
   font-size: 1.5rem;
@@ -358,7 +352,6 @@ body {
 .contact .row .warning span {
   color: var(--green);
   font-weight: 500;
-  background-color: var(--bg);
   font-size: 1.5rem;
   padding: 1rem 2rem;
 }
