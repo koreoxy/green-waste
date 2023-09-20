@@ -1,6 +1,5 @@
 const warningDiv = document.getElementById('warning');
 const warningMessage = `<span>Data telah terkirim</span>`;
-
 const form = document.getElementById('form');
 
 function handleGetFormData() {
@@ -19,9 +18,7 @@ function handleGetFormData() {
   };
 }
 
-function isNumber() {
-  const zipCode = handleGetFormData().zipCode;
-
+function isNumber(zipCode) {
   if (isNaN(zipCode) || zipCode === '') {
     alert('Masukkan angka pada kolom zip code');
     return false;
@@ -31,7 +28,7 @@ function isNumber() {
 }
 
 function checkboxIsChecked() {
-  const status = handleGetFormData().status;
+  const status = document.getElementById('status').checked;
 
   if (!status) {
     alert('Pilih checkbox');
@@ -41,9 +38,7 @@ function checkboxIsChecked() {
   return true;
 }
 
-function checkForm() {
-  const formData = handleGetFormData();
-
+function checkForm(formData) {
   if (formData.name === '' || formData.city === '' || formData.email === '') {
     alert('Data tidak boleh kosong');
     return false;
@@ -52,20 +47,23 @@ function checkForm() {
   return true;
 }
 
-function validateForm(event) {
-  event.preventDefault();
-  if (checkForm() && isNumber() && checkboxIsChecked()) {
-    console.log(handleGetFormData());
-    warningDiv.innerHTML = warningMessage;
-    form.reset();
-  } else {
-    console.log('Validasi gagal');
+function validateFormData(fromData) {
+  if (FormData && isNumber(fromData.zipCode) && checkboxIsChecked()) {
+    return true;
   }
+  return false;
 }
 
 function submit() {
-  const btnSubmit = document.getElementById('submit-form');
-  btnSubmit.addEventListener('click', validateForm);
+  if (validateFormData(handleGetFormData()) == false) {
+    document.getElementById('warning').textContent =
+      'Periksa form anda sekali lagi';
+  } else {
+    document.getElementById('warning').textContent = '';
+  }
 }
 
-submit();
+document.getElementById('submit-form').addEventListener('click', (event) => {
+  event.preventDefault();
+  submit();
+});

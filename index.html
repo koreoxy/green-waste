@@ -125,8 +125,9 @@
       <h1>Contact Us</h1>
       <p>Have questions? submit below</p>
 
+      <!-- FORM 1 -->
       <div class="row">
-        <form novalidate id="form">
+        <!-- <form novalidate id="form">
           <div class="input-group">
             <i data-feather="user"></i>
             <input type="text" placeholder="Your Name" id="name" />
@@ -153,9 +154,30 @@
             benar dan telah selesai</label
           >
           <button type="submit" id="submit-form" class="btn">Submit</button>
-        </form>
+        </form> -->
 
-        <div class="warning" id="warning"></div>
+        <!-- <div class="warning" id="warning"></div> -->
+      </div>
+
+      <!-- FORM 2 -->
+      <div class="row">
+        <form id="form">
+          <label for="name">Name:</label><br />
+          <input type="text" id="name" name="name" /><br />
+          <label for="city">City:</label><br />
+          <input type="text" id="city" name="city" /><br />
+          <label for="city">Email:</label><br />
+          <input type="email" id="email" name="email" /><br />
+          <label for="zip-code">Zip code:</label><br />
+          <input type="text" id="zip-code" name="zip-code" /><br />
+          <label id="check"
+            >Dengan ini saya menyatakan data yang diisi pada form ini adalah
+            benar dan telah sesuai</label
+          ><br />
+          <input type="checkbox" id="status" /><br />
+          <button id="submit-form" type="submit">Submit</button><br />
+          <div id="warning"></div>
+        </form>
       </div>
     </section>
 
