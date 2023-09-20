@@ -1,6 +1,8 @@
 const warningDiv = document.getElementById('warning');
 const warningMessage = `<span>Data telah terkirim</span>`;
 
+const form = document.getElementById('form');
+
 function handleGetFormData() {
   const name = document.getElementById('name').value;
   const city = document.getElementById('city').value;
@@ -55,6 +57,7 @@ function validateForm(event) {
   if (checkForm() && isNumber() && checkboxIsChecked()) {
     console.log(handleGetFormData());
     warningDiv.innerHTML = warningMessage;
+    form.reset();
   } else {
     console.log('Validasi gagal');
   }
