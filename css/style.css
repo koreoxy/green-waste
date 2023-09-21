@@ -125,6 +125,7 @@ body {
   margin-top: 1rem;
   font-weight: 500;
   color: #fff;
+  text-shadow: 1px 1px 3px rgb(1, 1, 6, 1);
 }
 
 .hero .content .button-join {
@@ -293,7 +294,6 @@ body {
 .contact .row {
   display: flex;
   margin-top: 2rem;
-  /* flex-direction: column; */
 }
 
 .contact .row form {
@@ -340,7 +340,6 @@ body {
   margin: 3rem;
   color: var(--green);
   font-weight: 500;
-  font-size: 1.5rem;
 }
 
 .contact .row #warning .warning {
