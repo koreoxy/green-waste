@@ -1,5 +1,5 @@
 const warningDiv = document.getElementById('warning');
-const warningMessage = `<span>Data telah terkirim</span>`;
+const warningMessage = `Success`;
 const form = document.getElementById('form');
 
 function handleGetFormData() {
@@ -60,7 +60,7 @@ function submit() {
       'Periksa form anda sekali lagi';
   } else {
     document.getElementById('warning').textContent = '';
-    document.getElementById('warning').textContent = 'Succes';
+    warningDiv.innerHTML = warningMessage;
     form.reset();
   }
 }
